@@ -1,0 +1,117 @@
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+html,body{
+width: 100%;
+height: 100%;
+color: #fff;
+font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    overflow-x: hidden;
+}
+
+.main
+{
+    width: 100vw;
+    height: fit-content;
+    min-height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 0;
+}
+.todo h1 {
+    font-size: 3rem;
+    /* text-align: center; */
+    margin-bottom: 2rem;
+}
+
+.inputBox {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+    height: 3rem;
+    padding: 0  0 0  1rem;
+    background-color: #6666;
+    border-radius: 30px;
+}
+input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #fff;
+}
+button{
+    padding: 0 2rem;
+    border-radius: 30px;
+    background-color: royalblue;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+::placeholder{
+    color: #fff;
+}
+
+.TaskContainer{
+    width: 35vw;
+    margin-top: 3rem;
+}
+
+ul p{
+    margin-top: 1rem;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    padding:  1rem  2rem 1rem 4rem;
+    list-style-type: none;
+    position: relative;
+    margin-left: 2rem;
+}
+ul p::before{
+    content: " ";
+    width: 2rem;
+    height: 2rem;
+    background-image: url("./uncheck.png");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+p span{
+    font-size: 1.3rem;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p span:hover{
+    scale: 1.2;
+    cursor: pointer;
+
+}
+ p.checked {
+    text-decoration: line-through;
+    /* color: #ffffff2f; */
+ }
+ p.checked::before{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-image: url("./checked.png");
+    background-position: center;
+    background-size: cover;
+ }
